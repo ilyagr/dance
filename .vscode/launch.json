@@ -9,6 +9,20 @@
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/out/**/*.js"],
     },
+{
+			"name": "Run Web Extension ",
+			"type": "pwa-extensionHost",
+			"debugWebWorkerHost": true,
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionDevelopmentKind=web"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/web/**/*.js"
+			],
+			"preLaunchTask": "npm: compile-web"
+		},
     {
       "name": "Run all tests",
       "type": "extensionHost",
